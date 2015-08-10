@@ -1,0 +1,11 @@
+<p>Tasks</p>
+
+<ul id="task-list">
+  {{#each model as |task|}}
+  <li>
+    <label>{{task.title}}: {{task.cost}}/{{task.value}}</label>
+  </li>
+  {{/each}}
+</ul>
+
+{{outlet}}
