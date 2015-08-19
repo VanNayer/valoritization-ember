@@ -2,6 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.findAll('task');
+    return this.store.find('task');
+  },
+  actions: {
+    say: function() {
+      alert('Michel');
+    }
   }
 });
