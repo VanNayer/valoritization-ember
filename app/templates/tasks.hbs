@@ -1,15 +1,22 @@
 <ul>
-  <li>{{#link-to 'tasks.new'}}Add a task{{/link-to}}</li>
+    <li>{{#link-to 'tasks.new'}}Add a task{{/link-to}}</li>
 </ul>
 
 <ul id="task-list">
   {{#each model as |task|}}
-  <li>
-    <label>{{task.title}}: {{task.cost}}/{{task.value}}</label>
-    {{#link-to 'task' task}}View task{{/link-to}}
-    {{#link-to 'task.edit' task}}Edit task{{/link-to}}
-  </li>
+      <li>
+          <label>{{task.title}}: {{task.cost}}/{{task.value}}</label>
+        {{#link-to 'task' task}}View task{{/link-to}}
+        {{#link-to 'task.edit' task}}Edit task{{/link-to}}
+      </li>
   {{/each}}
 </ul>
-<button {{action 'say'}}>Say</button>
+<button {{action 'say'}}>Say {{extremeCoordinates.minValue}} {{extremeCoordinates.maxValue}} {{extremeCoordinates.minCost}} {{extremeCoordinates.maxCost}}</button>
+
+
+{{#matrix-component extremeCoordinates=extremeCoordinates tasks=tasks}}{{/matrix-component}}
+
 {{outlet}}
+
+
+

@@ -1,0 +1,12 @@
+<table>
+    <tbody>
+    {{#each rows as |row|}}
+      <tr>
+        {{#each row.cells as |cell|}}
+          <td>{{cell.x}} / {{cell.y}} </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+    </tbody>
+</table>
+

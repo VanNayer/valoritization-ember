@@ -4,6 +4,7 @@ export default Ember.Route.extend({
   model: function() {
     return this.store.find('task');
   },
+
   actions: {
     say: function() {
       alert('Michel');
