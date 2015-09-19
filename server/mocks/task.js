@@ -3,11 +3,11 @@ module.exports = function(app) {
   var taskRouter = express.Router();
 
   var tasks = {
-      1: {id: 1, title: '12345', cost: 1, value: 8001},
-      2: {id: 2, title: '2345', cost: 2, value: 8002},
-      3: {id: 3, title: '345', cost: 3, value: 8003},
-      4: {id: 4, title: '45', cost: 4, value: 8004},
-      5: {id: 5, title: '5', cost: 5, value: 8005}
+      1: {id: 1, title: '12345', cost: 1, value: 5},
+      2: {id: 2, title: '2345', cost: 2, value: 4},
+      3: {id: 3, title: '345', cost: 3, value: 3},
+      4: {id: 4, title: '45', cost: 4, value: 2},
+      5: {id: 5, title: '5', cost: 5, value: 1}
     };
 
 

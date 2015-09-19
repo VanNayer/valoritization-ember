@@ -1,12 +1,7 @@
 <table>
     <tbody>
     {{#each rows as |row|}}
-      <tr>
-        {{#each row.cells as |cell|}}
-          <td>{{cell.x}} / {{cell.y}} </td>
-        {{/each}}
-      </tr>
+      {{row-component tasks=tasks row=row}}
     {{/each}}
     </tbody>
 </table>
-

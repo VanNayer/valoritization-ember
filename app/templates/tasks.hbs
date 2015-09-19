@@ -14,7 +14,10 @@
 <button {{action 'say'}}>Say {{extremeCoordinates.minValue}} {{extremeCoordinates.maxValue}} {{extremeCoordinates.minCost}} {{extremeCoordinates.maxCost}}</button>
 
 
-{{#matrix-component extremeCoordinates=extremeCoordinates tasks=tasks}}{{/matrix-component}}
+{{matrix-component
+      extremeCoordinates=extremeCoordinates
+      tasks=model}}
+
 
 {{outlet}}
 
