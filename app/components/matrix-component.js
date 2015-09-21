@@ -14,8 +14,10 @@ for (var y = nbRow; y >= 0; y--) {
 
 
 export default Ember.Component.extend({
-  rows: rows,
-  tasks: Ember.computed('tasks.[]', function() {
+  rows: Ember.computed('tasks', function() {
+    return rows;
+  }),
+  tasks: Ember.computed('tasks', function() {
     return this.get('tasks');
   })
 });

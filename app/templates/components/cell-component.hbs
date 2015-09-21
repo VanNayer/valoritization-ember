@@ -1,1 +1,9 @@
-{{taskOfCell.title}}
+<ul>
+  {{#each tasksOfCell as |task|}}
+      <li>
+          <div style="padding: {{task.cost}}px">
+            {{task.title}}
+          </div>
+      </li>
+  {{/each}}
+</ul>
