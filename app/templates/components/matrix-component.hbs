@@ -1,7 +1,5 @@
-<table>
-    <tbody>
-    {{#each rows as |row|}}
-      {{row-component tasks=tasks row=row}}
-    {{/each}}
-    </tbody>
-</table>
+<div style="position:relative; width: 90%; height: 300px;">
+  {{#each tasks as |task|}}
+    {{task-component task=task extremeCoordinates=extremeCoordinates}}
+  {{/each}}
+</div>
