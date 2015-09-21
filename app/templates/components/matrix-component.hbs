@@ -1,5 +1,12 @@
-<div style="position:relative; width: 90%; height: 300px;">
-  {{#each tasks as |task|}}
-    {{task-component task=task extremeCoordinates=extremeCoordinates}}
-  {{/each}}
+<div class="matrix">
+    <img src="assets/images/matrixBG.png">
+
+    <div class="matrix__legend cost">cost</div>
+    <div class="matrix__legend value">value</div>
+
+    <div class="matrix__tasks">
+      {{#each tasks as |task|}}
+        {{task-component task=task extremeCoordinates=extremeCoordinates}}
+      {{/each}}
+    </div>
 </div>

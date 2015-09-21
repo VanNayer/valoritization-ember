@@ -1,0 +1,74 @@
+@import "settings";
+@import "foundation";
+@import "bower_components/font-awesome/scss/font-awesome";
+
+.task-list {
+  padding-top: 50px;
+  list-style-type: none;
+}
+
+.matrix {
+  position: relative;
+  width: 90%;
+  height: 300px;
+  //background: rgba(0,176,235,1);
+  //background: -moz-linear-gradient(45deg, rgba(0,176,235,1) 0%, rgba(190,224,233,1) 46%, rgba(255,255,255,1) 100%);
+  //background: -webkit-linear-gradient(45deg, rgba(0,176,235,1) 0%, rgba(190,224,233,1) 46%, rgba(255,255,255,1) 100%);
+  //background: -o-linear-gradient(45deg, rgba(0,176,235,1) 0%, rgba(190,224,233,1) 46%, rgba(255,255,255,1) 100%);
+  //background: -ms-linear-gradient(45deg, rgba(0,176,235,1) 0%, rgba(190,224,233,1) 46%, rgba(255,255,255,1) 100%);
+  //background: linear-gradient(45deg, rgba(0,176,235,1) 0%, rgba(190,224,233,1) 46%, rgba(255,255,255,1) 100%);
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b0eb', endColorstr='#ffffff', GradientType=1 );
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+
+
+}
+
+.matrix__tasks {
+  width: 95%;
+  height: 95%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.matrix__legend {
+
+  position: absolute;
+  background-color: darkslategray;
+  color: white;
+
+  &.cost {
+    width: 20px;
+    height: 100%;
+    left: -20px;
+    word-wrap: break-word;
+    letter-spacing: 20px;
+  }
+  &.value {
+    width: 100%;
+    height: 20px;
+    bottom: -20px;
+  }
+}
+
+.matrix__task {
+  position: absolute;
+  border-radius: 40px;
+  background-color: #008CBA;
+  width: 50px;
+  text-align: center;
+}
+
+.matrix__task__link {
+  color: #FFFFFF;
+}

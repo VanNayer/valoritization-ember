@@ -1,22 +1,32 @@
-<ul>
-    <li>{{#link-to 'tasks.new'}}Add a task{{/link-to}}</li>
-</ul>
+<div class="row">
+    <div class="large-12 columns">
 
-<ul id="task-list">
+      {{matrix-component
+      extremeCoordinates=extremeCoordinates
+      tasks=model}}
+
+    </div>
+</div>
+
+<ul class="task-list">
   {{#each model as |task|}}
       <li>
-          <label>{{task.title}}: {{task.cost}}/{{task.value}}</label>
-        {{#link-to 'task' task}}View task{{/link-to}}
-        {{#link-to 'task.edit' task}}Edit task{{/link-to}}
+          <div class="row">
+              <div class="small-6 columns">
+                {{task.title}}
+              </div>
+              <div class="small-6 columns">
+                {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
+                {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
+                {{#link-to 'task.edit' task}}{{fa-icon "minus-circle"}}{{/link-to}}
+              </div>
+          </div>
       </li>
   {{/each}}
 </ul>
-<button {{action 'say'}}>Say {{extremeCoordinates.minValue}} {{extremeCoordinates.maxValue}} {{extremeCoordinates.minCost}} {{extremeCoordinates.maxCost}}</button>
+{{#link-to 'tasks.new'}}Add a task{{/link-to}}
 
 
-{{matrix-component
-      extremeCoordinates=extremeCoordinates
-      tasks=model}}
 
 
 {{outlet}}

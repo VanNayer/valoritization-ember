@@ -1,3 +1,5 @@
-<div style="position:absolute; bottom: {{percentFromTop}}%; left: {{percentFromLeft}}%;">
-  {{task.title}}
+<div class="matrix__task" style="bottom: {{percentFromTop}}%; left: {{percentFromLeft}}%;">
+  {{#link-to 'task' task class="matrix__task__link"}}
+    {{task.title}}
+  {{/link-to}}
 </div>
