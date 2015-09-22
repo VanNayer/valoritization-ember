@@ -1,0 +1,24 @@
+<table class="list">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Cost</th>
+        <th>Value</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each tasks as |task|}}
+        <tr>
+            <td>{{inline-edit value=task.title}}</td>
+            <td>{{inline-edit value=task.cost}}</td>
+            <td>{{inline-edit value=task.value}}</td>
+            <td>
+              {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
+              {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
+              {{#link-to 'task.edit' task}}{{fa-icon "minus-circle"}}{{/link-to}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

@@ -1,31 +1,10 @@
 <div class="row">
-    <div class="large-12 columns">
-
-      {{matrix-component
-      extremeCoordinates=extremeCoordinates
-      tasks=model}}
-
-    </div>
+  {{matrix-component extremeCoordinates=extremeCoordinates tasks=model}}
 </div>
-
-<ul class="task-list">
-  {{#each model as |task|}}
-      <li>
-          <div class="row">
-              <div class="small-6 columns">
-                {{task.title}}
-              </div>
-              <div class="small-6 columns">
-                {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
-                {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
-                {{#link-to 'task.edit' task}}{{fa-icon "minus-circle"}}{{/link-to}}
-              </div>
-          </div>
-      </li>
-  {{/each}}
-</ul>
-{{#link-to 'tasks.new'}}Add a task{{/link-to}}
-
+<div class="row">
+  {{list-component tasks=model}}
+  {{#link-to 'tasks.new'}}Add a task{{/link-to}}
+</div>
 
 
 
