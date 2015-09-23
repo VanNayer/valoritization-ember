@@ -1,8 +1,16 @@
 <div class="matrix">
     <img src="assets/images/matrixBG.png">
 
-    <div class="matrix__legend cost">cost</div>
-    <div class="matrix__legend value">value</div>
+    <div class="matrix__legend cost">
+        <span class="max-cost">{{extremeCoordinates.maxCost}}</span>
+        <span class="title">cost</span>
+        <span class="min-cost">{{extremeCoordinates.minCost}}</span>
+    </div>
+    <div class="matrix__legend value">
+        <span class="min-value">{{extremeCoordinates.minValue}}</span>
+        <span class="title">value</span>
+        <span class="max-value">{{extremeCoordinates.maxValue}}</span>
+    </div>
 
     <div class="matrix__tasks">
       {{#each tasks as |task|}}
