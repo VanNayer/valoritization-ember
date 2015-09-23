@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'matrix',
+    modulePrefix: 'valoritization',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

@@ -1,7 +1,7 @@
 {
-  "name": "matrix",
+  "name": "valoritization",
   "version": "0.0.0",
-  "description": "Small description for matrix goes here",
+  "description": "Valoritization uses a Cost/Value matrix to help you prioritize your tasks.",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -42,6 +42,7 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
     "express": "^4.13.3",
+    "body-parser": "^1.14.0",
     "glob": "^4.5.3",
     "morgan": "^1.6.1"
   }
