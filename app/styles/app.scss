@@ -27,7 +27,7 @@ $bgcolor: #333333;
   }
 }
 
-$legend_thickness: 30px;
+$legend_thickness: 20px;
 
 .matrix__tasks {
   width: 95%;
@@ -42,43 +42,36 @@ $legend_thickness: 30px;
   background-color: $bgcolor;
   color: white;
 
-  &.cost {
+  &.value {
     position: absolute;
     width: $legend_thickness;
     height: 100%;
     left: 0;
 
     .title{
-      position: absolute;
-      top: 40%;
-    }
-    .min-cost {
+      text-align: center;
       position: absolute;
       width: $legend_thickness;
-      text-align: center;
-      bottom: $legend_thickness;
+      top: 45%;
     }
-    .max-cost {
+    .max {
       position: absolute;
       width: $legend_thickness;
       text-align: center;
       top: 0;
     }
   }
-  &.value {
+  &.cost {
     width: 100%;
     height: $legend_thickness;
+    line-height: $legend_thickness;
     bottom: 0;
 
     .title{
       position: absolute;
-      left: 45%;
+      left: 50%;
     }
-    .min-value {
-      position: absolute;
-      left: $legend_thickness;
-    }
-    .max-value {
+    .max {
       position: absolute;
       right: 1%;
     }
