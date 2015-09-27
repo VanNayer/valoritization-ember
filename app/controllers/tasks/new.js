@@ -4,8 +4,9 @@ export default Ember.Controller.extend({
 
   actions: {
     save: function (task) {
-      task.save(function() {}, function() {});
-      this.transitionToRoute('task', task);
+      var newTask = this.get('model');
+      newTask.save(function() {}, function() {});
+      this.transitionToRoute('task', newTask);
     }
   }
 });

@@ -1,15 +1,14 @@
-<div>
-  <label for="title">Title</label>
-  {{input value=model.title}}
-</div>
-<div>
-  <label for="cost">Cost</label>
-  {{input value=model.cost}}
-</div>
-<div>
-  <label for="value">Value</label>
-  {{input value=model.value}}
-</div>
-<div>
-  <button {{action 'save' model}} title="save"> ok </button>
-</div>
+<form onsubmit="return false;">
+    <div>
+        <label for="title">Title</label>
+      {{input value=model.title enter='save'}}
+    </div>
+    <div>
+        <label for="cost">Cost</label>
+      {{input value=model.cost enter='save'}}
+    </div>
+    <div>
+        <label for="value">Value</label>
+      {{input value=model.value enter='save'}}
+    </div>
+</form>

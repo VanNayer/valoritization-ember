@@ -1,19 +1,21 @@
-<div class="matrix">
-    <img src="assets/images/matrixBG.png">
+<img class="matrix-img" src="assets/images/matrix-background.png">
 
-    <div class="matrix__legend value">
-        <span class="title">{{fa-icon "star"}}</span>
-        <span class="max">{{extremeCoordinates.maxValue}}</span>
-    </div>
 
-    <div class="matrix__legend cost">
-        <span class="title">{{fa-icon "wrench"}}</span>
-        <span class="max">{{extremeCoordinates.maxCost}}</span>
-    </div>
+<span class="matrix__legend origin">0</span>
 
-    <div class="matrix__tasks">
-      {{#each tasks as |task|}}
-        {{task-component task=task extremeCoordinates=extremeCoordinates}}
-      {{/each}}
-    </div>
+
+<div class="matrix__legend value">
+    <span class="title">{{fa-icon "star"}}</span>
+    <span class="max">{{extremeCoordinates.maxValue}}</span>
+</div>
+
+<div class="matrix__legend cost">
+    <span class="title">{{fa-icon "wrench"}}</span>
+    <span class="max">{{extremeCoordinates.maxCost}}</span>
+</div>
+
+<div class="matrix__tasks">
+  {{#each tasks as |task|}}
+    {{task-component task=task extremeCoordinates=extremeCoordinates}}
+  {{/each}}
 </div>

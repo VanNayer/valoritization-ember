@@ -1,8 +1,7 @@
 {{#if editing}}
-    <form>
-      {{input value=value}}
+    <form onsubmit="return false;">
+      {{input value=value enter="stopEditing"}}
         <a href="#" {{action "cancelEditing"}}>Cancel</a>
-        <a href="#" {{action "stopEditing"}}>Save</a>
     </form>
 {{else}}
     <a href="#" {{action "startEditing"}}>{{value}}</a>

@@ -5,15 +5,14 @@ export default Ember.Component.extend({
   editing: false,
 
   actions: {
+
     startEditing: function () {
       this.toggleProperty(("editing"));
     },
 
     stopEditing: function () {
       this.toggleProperty("editing");
-      if(this.get("isDirty")){
-        this.get("content").save();
-      }
+      this.get('model').save();
     },
 
     cancelEditing: function () {

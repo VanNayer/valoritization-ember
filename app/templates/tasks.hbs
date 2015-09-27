@@ -1,14 +1,14 @@
-<div class="row">
-    <div class="small-12 columns">
-      {{matrix-component extremeCoordinates=extremeCoordinates tasks=model}}
+<div class="matrix row mtxl">
+    <div class="small-12 columns mxl full-media">
+      {{matrix-component extremeCoordinates=extremeCoordinates tasks=model class="full-media"}}
     </div>
 </div>
-<div class="row">
-    <div class="small-9 columns">
-      {{list-component tasks=model}}
+<div class="row mtxl listing">
+    <div class="small-8 columns pln full-height">
+      {{list-component tasks=model class="list"}}
       {{#link-to 'tasks.new'}}Add a task{{/link-to}}
     </div>
-    <div class="small-3 columns">
+    <div class="small-4 columns">
       {{outlet}}
     </div>
 

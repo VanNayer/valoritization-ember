@@ -1,0 +1,426 @@
+// Paddings
+
+// None
+.pan         { padding: 0 !important; }
+.ptn, .pvn   { padding-top: 0 !important; }
+.prn, .phn   { @include padding-right($rtl, 0 !important); }
+.pbn, .pvn   { padding-bottom: 0 !important; }
+.pln, .phn   { @include padding-left($rtl, 0 !important); }
+
+// Extra Small
+.paxs        { padding: $spacingXs !important; }
+.ptxs, .pvxs { padding-top: $spacingXs !important; }
+.prxs, .phxs { @include padding-right($rtl, $spacingXs !important); }
+.pbxs, .pvxs { padding-bottom: $spacingXs !important; }
+.plxs, .phxs { @include padding-left($rtl, $spacingXs !important); }
+
+// Small
+.pas         { padding: $spacingS !important; }
+.pts, .pvs   { padding-top: $spacingS !important; }
+.prs, .phs   { @include padding-right($rtl, $spacingS !important); }
+.pbs, .pvs   { padding-bottom: $spacingS !important; }
+.pls, .phs   { @include padding-left($rtl, $spacingS !important); }
+
+// Medium
+.pam         { padding: $spacingM !important; }
+.ptm, .pvm   { padding-top: $spacingM !important; }
+.prm, .phm   { @include padding-right($rtl, $spacingM !important); }
+.pbm, .pvm   { padding-bottom: $spacingM !important; }
+.plm, .phm   { @include padding-left($rtl, $spacingM !important); }
+
+// Large
+.pal         { padding: $spacingL !important; }
+.ptl, .pvl   { padding-top: $spacingL !important; }
+.prl, .phl   { @include padding-right($rtl, $spacingL !important); }
+.pbl, .pvl   { padding-bottom: $spacingL !important; }
+.pll, .phl   { @include padding-left($rtl, $spacingL !important); }
+
+// Extra Large
+.paxl        { padding: $spacingXl !important; }
+.ptxl, .pvxl { padding-top: $spacingXl !important; }
+.prxl, .phxl { @include padding-right($rtl, $spacingXl !important); }
+.pbxl, .pvxl { padding-bottom: $spacingXl !important; }
+.plxl, .phxl { @include padding-left($rtl, $spacingXl !important); }
+
+
+// Margins
+
+// None
+.man         { margin: 0 !important; }
+.mtn, .mvn   { margin-top: 0 !important; }
+.mrn, .mhn   { @include margin-right($rtl, 0 !important); }
+.mbn, .mvn   { margin-bottom: 0 !important; }
+.mln, .mhn   { @include margin-left($rtl, 0 !important); }
+
+// Extra Small
+.maxs        { margin: $spacingXs !important; }
+.mtxs, .mvxs { margin-top: $spacingXs !important; }
+.mrxs, .mhxs { @include margin-right($rtl, $spacingXs !important); }
+.mbxs, .mvxs { margin-bottom: $spacingXs !important; }
+.mlxs, .mhxs { @include margin-left($rtl, $spacingXs !important); }
+
+// Small
+.mas         { margin: $spacingS !important; }
+.mts, .mvs   { margin-top: $spacingS !important; }
+.mrs, .mhs   { @include margin-right($rtl, $spacingS !important); }
+.mbs, .mvs   { margin-bottom: $spacingS !important; }
+.mls, .mhs   { @include margin-left($rtl, $spacingS !important); }
+
+// Medium
+.mam         { margin: $spacingM !important; }
+.mtm, .mvm   { margin-top: $spacingM !important; }
+.mrm, .mhm   { @include margin-right($rtl, $spacingM !important); }
+.mbm, .mvm   { margin-bottom: $spacingM !important; }
+.mlm, .mhm   { @include margin-left($rtl, $spacingM !important); }
+
+// Large
+.mal         { margin: $spacingL !important; }
+.mtl, .mvl   { margin-top: $spacingL !important; }
+.mrl, .mhl   { @include margin-right($rtl, $spacingL !important); }
+.mbl, .mvl   { margin-bottom: $spacingL !important; }
+.mll, .mhl   { @include margin-left($rtl, $spacingL !important); }
+
+// Extra Large
+.maxl        { margin: $spacingXl !important; }
+.mtxl, .mvxl { margin-top: $spacingXl !important; }
+.mrxl, .mhxl { @include margin-right($rtl, $spacingXl !important); }
+.mbxl, .mvxl { margin-bottom: $spacingXl !important; }
+.mlxl, .mhxl { @include margin-left($rtl, $spacingXl !important); }
+
+
+// Border Radius
+
+// None
+.bran                   { @include border-radius(unquote("0 !important")); }
+.brtln, .brtn, .brln    { @include border-radius-topleft(unquote("0 !important")); }
+.brtrn, .brtn, .brrn    { @include border-radius-topright(unquote("0 !important")); }
+.brbrn, .brbn, .brrn    { @include border-radius-bottomright(unquote("0 !important")); }
+.brbln, .brbn, .brln    { @include border-radius-bottomleft(unquote("0 !important")); }
+
+// Small
+.bras                   { @include border-radius($borderRadiusS unquote("!important")); }
+.brtls, .brts, .brls    { @include border-radius-topleft($borderRadiusS unquote("!important")); }
+.brtrs, .brts, .brrs    { @include border-radius-topright($borderRadiusS unquote("!important")); }
+.brbrs, .brbs, .brrs    { @include border-radius-bottomright($borderRadiusS unquote("!important")); }
+.brbls, .brbs, .brls    { @include border-radius-bottomleft($borderRadiusS unquote("!important")); }
+
+// Medium
+.bram                   { @include border-radius($borderRadiusM unquote("!important")); }
+.brtlm, .brtm, .brlm    { @include border-radius-topleft($borderRadiusM unquote("!important")); }
+.brtrm, .brtm, .brrm    { @include border-radius-topright($borderRadiusM unquote("!important")); }
+.brbrm, .brbm, .brrm    { @include border-radius-bottomright($borderRadiusM unquote("!important")); }
+.brblm, .brbm, .brlm    { @include border-radius-bottomleft($borderRadiusM unquote("!important")); }
+
+// Large
+.bral                   { @include border-radius($borderRadiusL unquote("!important")); }
+.brtll, .brtl, .brll    { @include border-radius-topleft($borderRadiusL unquote("!important")); }
+.brtrl, .brtl, .brrl    { @include border-radius-topright($borderRadiusL unquote("!important")); }
+.brbrl, .brbl, .brrl    { @include border-radius-bottomright($borderRadiusL unquote("!important")); }
+.brbll, .brbl, .brll    { @include border-radius-bottomleft($borderRadiusL unquote("!important")); }
+
+
+// Text Alignment
+
+.tac, .center { text-align: center; }
+.tal { @include text-align-left($rtl); }
+.tar { @include text-align-right($rtl); }
+.taj { text-align: justify; }
+.tai { text-align: inherit; }
+
+.hyph { @include hyphens(); }
+
+// Block Alignment
+
+.bac, .bal { float: none; margin-right: auto !important; }
+.bac, .bar { float: none; margin-left: auto !important; }
+
+// Vertical Alignment
+
+.vam { vertical-align: middle; }
+.vab { vertical-align: bottom; }
+
+// Gray scale
+
+.black { color: $black; }
+.dark-gray { color: $grayDark; }
+.gray { color: $gray; }
+.light-gray { color: $grayLight; }
+.lighter-gray { color: $grayLighter; }
+.white { color: $white; }
+
+
+// Miscellaneous
+
+.context { overflow: hidden; zoom: 1; _overflow: visible; }
+.cf, .clearfix { @include clearfixHack(); }
+.clear, .clr { clear: both; }
+.hidden { display: none; }
+.decorative {
+  font-family: $font-stack;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+
+// Hiding content for accessibility
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.elsewhere {
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); // IE7
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.fl, .floatL { @include float-left($rtl); }
+.fr, .floatR { @include float-right($rtl); }
+.fno { float: none; }
+.outline { outline: $grayLight dashed thin; }
+.outline-red { outline: #FF0000 dashed thin; }
+.error { color:#da4d4d; }
+.nowrap { white-space: nowrap; }
+.layered { position: absolute; }
+.relative { position: relative; }
+
+// Responsive
+
+.fluid-media {
+  width: 100%;
+  height: 100%;
+  -ms-interpolation-mode: bicubic; // IE 8
+}
+
+.full-media {
+  width: 100%;
+  height: 100%;
+}
+
+.full-height{
+  height: 100%;
+}
+
+.hide-l { display: none; }
+.show-l { display: block; }
+
+.dispb { display: block; }
+.dispib { display: inline-block; }
+.dispi { display: inline; }
+
+@media screen and (max-width: $breakpointM) {
+  .hide-m { display: none; }
+  .show-m { display: block; }
+
+  .tal-m { @include text-align-left($rtl); }
+  .tar-m { @include text-align-right($rtl); }
+  .tac-m { text-align: center; }
+
+  .fl-m { @include float-left($rtl); }
+  .fr-m { @include float-right($rtl); }
+  .fno-m { float: none; }
+
+  .dispb-m { display: block; }
+  .dispib-m { display: inline-block; }
+  .dispi-m { display: inline; }
+
+  .bac-m, .bal-m { float: none; margin-right: auto !important; }
+  .bac-m, .bar-m { float: none; margin-left: auto !important; }
+
+  // Paddings
+
+  // None
+  .pan-m           { padding: 0 !important; }
+  .ptn-m, .pvn-m   { padding-top: 0 !important; }
+  .prn-m, .phn-m   { @include padding-right($rtl, 0 !important); }
+  .pbn-m, .pvn-m   { padding-bottom: 0 !important; }
+  .pln-m, .phn-m   { @include padding-left($rtl, 0 !important); }
+
+  // Extra Small
+  .paxs-m          { padding: $spacingXs !important; }
+  .ptxs-m, .pvxs-m { padding-top: $spacingXs !important; }
+  .prxs-m, .phxs-m { @include padding-right($rtl, $spacingXs !important); }
+  .pbxs-m, .pvxs-m { padding-bottom: $spacingXs !important; }
+  .plxs-m, .phxs-m { @include padding-left($rtl, $spacingXs !important); }
+
+  // Small
+  .pas-m           { padding: $spacingS !important; }
+  .pts-m, .pvs-m   { padding-top: $spacingS !important; }
+  .prs-m, .phs-m   { @include padding-right($rtl, $spacingS !important); }
+  .pbs-m, .pvs-m   { padding-bottom: $spacingS !important; }
+  .pls-m, .phs-m   { @include padding-left($rtl, $spacingS !important); }
+
+  // Medium
+  .pam-m           { padding: $spacingM !important; }
+  .ptm-m, .pvm-m   { padding-top: $spacingM !important; }
+  .prm-m, .phm-m   { @include padding-right($rtl, $spacingM !important); }
+  .pbm-m, .pvm-m   { padding-bottom: $spacingM !important; }
+  .plm-m, .phm-m   { @include padding-left($rtl, $spacingM !important); }
+
+  // Large
+  .pal-m           { padding: $spacingL !important; }
+  .ptl-m, .pvl-m   { padding-top: $spacingL !important; }
+  .prl-m, .phl-m   { @include padding-right($rtl, $spacingL !important); }
+  .pbl-m, .pvl-m   { padding-bottom: $spacingL !important; }
+  .pll-m, .phl-m   { @include padding-left($rtl, $spacingL !important); }
+
+  // Extra Large
+  .paxl-m          { padding: $spacingXl !important; }
+  .ptxl-m, .pvxl-m { padding-top: $spacingXl !important; }
+  .prxl-m, .phxl-m { @include padding-right($rtl, $spacingXl !important); }
+  .pbxl-m, .pvxl-m { padding-bottom: $spacingXl !important; }
+  .plxl-m, .phxl-m { @include padding-left($rtl, $spacingXl !important); }
+
+  // Margins
+
+  // None
+  .man-m           { margin: 0 !important; }
+  .mtn-m, .mvn-m   { margin-top: 0 !important; }
+  .mrn-m, .mhn-m   { @include margin-right($rtl, 0 !important); }
+  .mbn-m, .mvn-m   { margin-bottom: 0 !important; }
+  .mln-m, .mhn-m   { @include margin-left($rtl, 0 !important); }
+
+  // Extra Small
+  .maxs-m          { margin: $spacingXs !important; }
+  .mtxs-m, .mvxs-m { margin-top: $spacingXs !important; }
+  .mrxs-m, .mhxs-m { @include margin-right($rtl, $spacingXs !important); }
+  .mbxs-m, .mvxs-m { margin-bottom: $spacingXs !important; }
+  .mlxs-m, .mhxs-m { @include margin-left($rtl, $spacingXs !important); }
+
+  // Small
+  .mas-m           { margin: $spacingS !important; }
+  .mts-m, .mvs-m   { margin-top: $spacingS !important; }
+  .mrs-m, .mhs-m   { @include margin-right($rtl, $spacingS !important); }
+  .mbs-m, .mvs-m   { margin-bottom: $spacingS !important; }
+  .mls-m, .mhs-m   { @include margin-left($rtl, $spacingS !important); }
+
+  // Medium
+  .mam-m           { margin: $spacingM !important; }
+  .mtm-m, .mvm-m   { margin-top: $spacingM !important; }
+  .mrm-m, .mhm-m   { @include margin-right($rtl, $spacingM !important); }
+  .mbm-m, .mvm-m   { margin-bottom: $spacingM !important; }
+  .mlm-m, .mhm-m   { @include margin-left($rtl, $spacingM !important); }
+
+  // Large
+  .mal-m           { margin: $spacingL !important; }
+  .mtl-m, .mvl-m   { margin-top: $spacingL !important; }
+  .mrl-m, .mhl-m   { @include margin-right($rtl, $spacingL !important); }
+  .mbl-m, .mvl-m   { margin-bottom: $spacingL !important; }
+  .mll-m, .mhl-m   { @include margin-left($rtl, $spacingL !important); }
+
+  // Extra Large
+  .maxl-m          { margin: $spacingXl !important; }
+  .mtxl-m, .mvxl-m { margin-top: $spacingXl !important; }
+  .mrxl-m, .mhxl-m { @include margin-right($rtl, $spacingXl !important); }
+  .mbxl-m, .mvxl-m { margin-bottom: $spacingXl !important; }
+  .mlxl-m, .mhxl-m { @include margin-left($rtl, $spacingXl !important); }
+}
+
+@media screen and (max-width: $breakpointS) {
+  .hide-s { display: none; }
+  .show-s { display: block; }
+
+  .tal-s { @include text-align-left($rtl); }
+  .tar-s { @include text-align-right($rtl); }
+  .tac-s { text-align: center; }
+
+  .fl-s { @include float-left($rtl); }
+  .fr-s { @include float-right($rtl); }
+  .fno-s { float: none; }
+
+  .dispb-s { display: block; }
+  .dispib-s { display: inline-block; }
+  .dispi-s { display: inline; }
+
+  .bac-s, .bal-s { float: none; margin-right: auto !important; }
+  .bac-s, .bar-s { float: none; margin-left: auto !important; }
+
+  // Paddings
+
+  // None
+  .pan-s           { padding: 0 !important; }
+  .ptn-s, .pvn-s   { padding-top: 0 !important; }
+  .prn-s, .phn-s   { @include padding-right($rtl, 0 !important); }
+  .pbn-s, .pvn-s   { padding-bottom: 0 !important; }
+  .pln-s, .phn-s   { @include padding-left($rtl, 0 !important); }
+
+  // Extra Small
+  .paxs-s          { padding: $spacingXs !important; }
+  .ptxs-s, .pvxs-s { padding-top: $spacingXs !important; }
+  .prxs-s, .phxs-s { @include padding-right($rtl, $spacingXs !important); }
+  .pbxs-s, .pvxs-s { padding-bottom: $spacingXs !important; }
+  .plxs-s, .phxs-s { @include padding-left($rtl, $spacingXs !important); }
+
+  // Small
+  .pas-s           { padding: $spacingS !important; }
+  .pts-s, .pvs-s   { padding-top: $spacingS !important; }
+  .prs-s, .phs-s   { @include padding-right($rtl, $spacingS !important); }
+  .pbs-s, .pvs-s   { padding-bottom: $spacingS !important; }
+  .pls-s, .phs-s   { @include padding-left($rtl, $spacingS !important); }
+
+  // Medium
+  .pam-s           { padding: $spacingM !important; }
+  .ptm-s, .pvm-s   { padding-top: $spacingM !important; }
+  .prm-s, .phm-s   { @include padding-right($rtl, $spacingM !important); }
+  .pbm-s, .pvm-s   { padding-bottom: $spacingM !important; }
+  .plm-s, .phm-s   { @include padding-left($rtl, $spacingM !important); }
+
+  // Large
+  .pal-s           { padding: $spacingL !important; }
+  .ptl-s, .pvl-s   { padding-top: $spacingL !important; }
+  .prl-s, .phl-s   { @include padding-right($rtl, $spacingL !important); }
+  .pbl-s, .pvl-s   { padding-bottom: $spacingL !important; }
+  .pll-s, .phl-s   { @include padding-left($rtl, $spacingL !important); }
+
+  // Extra Large
+  .paxl-s          { padding: $spacingXl !important; }
+  .ptxl-s, .pvxl-s { padding-top: $spacingXl !important; }
+  .prxl-s, .phxl-s { @include padding-right($rtl, $spacingXl !important); }
+  .pbxl-s, .pvxl-s { padding-bottom: $spacingXl !important; }
+  .plxl-s, .phxl-s { @include padding-left($rtl, $spacingXl !important); }
+
+  // Margins
+
+  // None
+  .man-s           { margin: 0 !important; }
+  .mtn-s, .mvn-s   { margin-top: 0 !important; }
+  .mrn-s, .mhn-s   { @include margin-right($rtl, 0 !important); }
+  .mbn-s, .mvn-s   { margin-bottom: 0 !important; }
+  .mln-s, .mhn-s   { @include margin-left($rtl, 0 !important); }
+
+  // Extra Small
+  .maxs-s          { margin: $spacingXs !important; }
+  .mtxs-s, .mvxs-s { margin-top: $spacingXs !important; }
+  .mrxs-s, .mhxs-s { @include margin-right($rtl, $spacingXs !important); }
+  .mbxs-s, .mvxs-s { margin-bottom: $spacingXs !important; }
+  .mlxs-s, .mhxs-s { @include margin-left($rtl, $spacingXs !important); }
+
+  // Small
+  .mas-s           { margin: $spacingS !important; }
+  .mts-s, .mvs-s   { margin-top: $spacingS !important; }
+  .mrs-s, .mhs-s   { @include margin-right($rtl, $spacingS !important); }
+  .mbs-s, .mvs-s   { margin-bottom: $spacingS !important; }
+  .mls-s, .mhs-s   { @include margin-left($rtl, $spacingS !important); }
+
+  // Medium
+  .mam-s           { margin: $spacingM !important; }
+  .mtm-s, .mvm-s   { margin-top: $spacingM !important; }
+  .mrm-s, .mhm-s   { @include margin-right($rtl, $spacingM !important); }
+  .mbm-s, .mvm-s   { margin-bottom: $spacingM !important; }
+  .mlm-s, .mhm-s   { @include margin-left($rtl, $spacingM !important); }
+
+  // Large
+  .mal-s           { margin: $spacingL !important; }
+  .mtl-s, .mvl-s   { margin-top: $spacingL !important; }
+  .mrl-s, .mhl-s   { @include margin-right($rtl, $spacingL !important); }
+  .mbl-s, .mvl-s   { margin-bottom: $spacingL !important; }
+  .mll-s, .mhl-s   { @include margin-left($rtl, $spacingL !important); }
+
+  // Extra Large
+  .maxl-s          { margin: $spacingXl !important; }
+  .mtxl-s, .mvxl-s { margin-top: $spacingXl !important; }
+  .mrxl-s, .mhxl-s { @include margin-right($rtl, $spacingXl !important); }
+  .mbxl-s, .mvxl-s { margin-bottom: $spacingXl !important; }
+  .mlxl-s, .mhxl-s { @include margin-left($rtl, $spacingXl !important); }
+}

@@ -1,4 +1,4 @@
-<table class="list">
+<table class="full-media">
     <thead>
     <tr>
         <th>Title</th>
@@ -10,13 +10,13 @@
     <tbody>
     {{#each tasks as |task|}}
         <tr>
-            <td>{{inline-edit value=task.title}}</td>
-            <td>{{inline-edit value=task.cost}}</td>
-            <td>{{inline-edit value=task.value}}</td>
+            <td>{{inline-edit value=task.title model=task}}</td>
+            <td>{{inline-edit value=task.cost model=task}}</td>
+            <td>{{inline-edit value=task.value model=task}}</td>
             <td>
               {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
               {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
-              {{#link-to 'task.edit' task}}{{fa-icon "minus-circle"}}{{/link-to}}
+              <a {{action "deleteTask" task}}>{{fa-icon "minus-circle"}}</a>
             </td>
         </tr>
     {{/each}}
