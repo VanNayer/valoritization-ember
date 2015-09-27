@@ -3,6 +3,17 @@
 module.exports = function(environment) {
 
   var ENV = {
+    //In case you want to allow a client from another server:
+    //
+    //contentSecurityPolicy: {
+    //  'default-src': '*',
+    //  'script-src': '*',
+    //  'font-src': '*',
+    //  'connect-src': '*',
+    //  'img-src': '*',
+    //  'style-src': '*',
+    //  'frame-src': '*'
+    //},
     modulePrefix: 'valoritization',
     environment: environment,
     baseURL: '/',
