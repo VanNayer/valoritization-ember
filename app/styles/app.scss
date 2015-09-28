@@ -105,15 +105,17 @@ $legend_thickness: 20px;
   }
 }
 
-.matrix__task {
+.matrix__tasks__task {
   position: absolute;
   border-radius: 40px;
   background-color: $bgcolor;
-  width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
   text-align: center;
+  opacity: 0.8;
 }
 
-.matrix__task__link {
+.matrix__tasks__task__link {
   color: #FFFFFF;
 }
 

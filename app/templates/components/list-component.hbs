@@ -2,8 +2,8 @@
     <thead>
     <tr>
         <th>Title</th>
-        <th>Cost</th>
         <th>Value</th>
+        <th>Cost</th>
         <th>Actions</th>
     </tr>
     </thead>
@@ -11,8 +11,8 @@
     {{#each tasks as |task|}}
         <tr>
             <td>{{inline-edit value=task.title model=task}}</td>
-            <td>{{inline-edit value=task.cost model=task}}</td>
             <td>{{inline-edit value=task.value model=task}}</td>
+            <td>{{inline-edit value=task.cost model=task}}</td>
             <td>
               {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
               {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
