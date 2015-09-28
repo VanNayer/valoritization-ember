@@ -4,6 +4,15 @@ export default Ember.Component.extend({
 
   editing: false,
 
+  isInvalid: Ember.computed('value', function () {
+    var newTask = this.get('model');
+    const {
+      m,
+      validations
+      } = newTask.validateSync();
+    return (validations.get('isInvalid'));
+  }),
+
   actions: {
 
     startEditing: function () {
@@ -11,8 +20,11 @@ export default Ember.Component.extend({
     },
 
     stopEditing: function () {
-      this.toggleProperty("editing");
-      this.get('model').save();
+      if (!this.get('isInvalid')) {
+
+        this.toggleProperty("editing");
+        this.get('model').save();
+      }
     },
 
     cancelEditing: function () {

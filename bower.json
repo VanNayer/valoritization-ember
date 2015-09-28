@@ -14,7 +14,9 @@
     "qunit": "~1.18.0",
     "lodash": "^2.4.0",
     "foundation": "~5.5.0",
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4.4.0",
+    "moment": ">= 2.8.0",
+    "moment-timezone": ">= 0.1.0"
   },
   "resolutions": {
     "jquery": ">=1.6"

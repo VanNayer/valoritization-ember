@@ -1,14 +1,25 @@
 <form onsubmit="return false;">
     <div>
-        <label for="title">Title</label>
-      {{input value=model.title enter='save'}}
+        <label>
+          {{input placeholder='Title' value=model.title enter='save'}}
+        </label>
+        {{#if model.validations.attrs.title.isInvalid}}
+          <small class="error">{{model.validations.attrs.title.message}}</small>
+        {{/if}}
     </div>
     <div>
-        <label for="cost">Cost</label>
-      {{input value=model.cost enter='save'}}
+      {{input placeholder='Cost' value=model.cost enter='save'}}
+      {{#if model.validations.attrs.cost.isInvalid}}
+          <small class="error">{{model.validations.attrs.cost.message}}</small>
+      {{/if}}
     </div>
     <div>
-        <label for="value">Value</label>
-      {{input value=model.value enter='save'}}
+      {{input placeholder='Value' value=model.value enter='save'}}
+      {{#if model.validations.attrs.value.isInvalid}}
+          <small class="error">{{model.validations.attrs.value.message}}</small>
+      {{/if}}
+    </div>
+    <div>
+      {{input placeholder='Description' value=model.description enter='save'}}
     </div>
 </form>

@@ -5,8 +5,15 @@ export default Ember.Controller.extend({
   actions: {
     save: function (task) {
       var newTask = this.get('model');
-      newTask.save(function() {}, function() {});
-      this.transitionToRoute('task', newTask);
+      const {
+        m,
+        validations
+        } = newTask.validateSync();
+
+      if(validations.get('isValid')) {
+        newTask.save(function() {}, function() {});
+        this.transitionToRoute('task', newTask);
+      }
     }
   }
 });
