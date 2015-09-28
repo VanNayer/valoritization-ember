@@ -3,7 +3,7 @@
 @import "variables";
 @import "mixins";
 @import "helper";
-@import "bower_components/font-awesome/scss/font-awesome";
+@import 'bower_components/font-awesome/scss/font-awesome';
 
 $bgcolor: #333333;
 
@@ -11,6 +11,10 @@ body > .ember-view {
   position: fixed;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: $breakpointM) {
+    height: auto;
+    position: static;
+  }
 }
 
 .top-bar > h1 {
@@ -20,9 +24,15 @@ body > .ember-view {
   margin-left: 10%;
 
 }
+.inline-edit-input[type="text"] {
+  height: 1.4rem;
+}
 
 .matrix {
   height: 50%;
+  @media screen and (max-width: $breakpointM) {
+    height: 200px;
+  }
 
 }
 
@@ -109,11 +119,18 @@ $legend_thickness: 20px;
 
 .listing {
   height: 40%;
+  @media screen and (max-width: $breakpointM) {
+    height: auto;
+  }
 }
 
 .list {
   width: 100%;
   height: 80%;
   overflow: scroll;
+  @media screen and (max-width: $breakpointM) {
+    height: auto;
+    overflow: auto;
+  }
 }
 

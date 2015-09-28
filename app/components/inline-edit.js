@@ -4,13 +4,16 @@ export default Ember.Component.extend({
 
   editing: false,
 
-  isInvalid: Ember.computed('value', function () {
-    var newTask = this.get('model');
-    const {
-      m,
-      validations
-      } = newTask.validateSync();
-    return (validations.get('isInvalid'));
+  validations: Ember.computed('value', function () {
+    return this.get('model').validateSync().validations;
+  }),
+
+  isInvalid: Ember.computed('validations', function () {
+    return this.get('validations').get('isInvalid');
+  }),
+
+  invalidMessage: Ember.computed('validations', function () {
+    return this.get('validations').get('message');
   }),
 
   actions: {
@@ -21,7 +24,6 @@ export default Ember.Component.extend({
 
     stopEditing: function () {
       if (!this.get('isInvalid')) {
-
         this.toggleProperty("editing");
         this.get('model').save();
       }
@@ -29,7 +31,7 @@ export default Ember.Component.extend({
 
     cancelEditing: function () {
       this.toggleProperty("editing");
-      this.get("content").rollback();
+      this.get("model").rollbackAttributes();
     }
   }
 
