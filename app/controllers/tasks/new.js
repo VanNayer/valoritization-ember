@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
 
       if(validations.get('isValid')) {
         newTask.save(function() {}, function() {});
-        this.transitionToRoute('task', newTask);
+        this.transitionToRoute('tasks.new');
       }
     }
   }

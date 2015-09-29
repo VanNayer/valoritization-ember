@@ -1,14 +1,21 @@
-<br/>
-Task details:
-<div>
-  <label for="title">Title</label>{{model.title}}
+<div class="row man pan" style="background-color: #d9d8dd">
+    <div class="small-11 columns man pan">
+      {{inline-edit value=model.title model=model}}
+    </div>
+    <div class="small-1 columns man pan" style="background-color: #d9d8dd">
+        <a {{action "deleteTask" model}}>{{fa-icon "minus-circle"}}</a>
+    </div>
 </div>
-<div>
-  <label for="cost">Cost</label>{{model.cost}}
+<div class="row man pan">
+    <div class="medium-4 columns man pan">Value:</div>
+    <div class="medium-8 columns man pan">{{inline-edit value=model.value model=model}}</div>
 </div>
-<div>
-  <label for="value">Value</label>{{model.value}}
+<div class="row man pan">
+    <div class="medium-4 columns man pan">Cost:</div>
+    <div class="medium-8 columns man pan">{{inline-edit value=model.cost model=model}}</div>
 </div>
-<div>
-    <label for="description">Description</label>{{model.description}}
+<div class="row man pan">
+    <div class="medium-4 columns man pan">Description:</div>
+    <div class="medium-8 columns man pan">{{inline-edit value=model.description model=model}}</div>
 </div>
+

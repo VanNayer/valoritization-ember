@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('tasks', { path: '/' }, function() {
     this.resource('task', { path:'/task/:task_id' }, function(){
-      this.route('edit');
+      // by default this.route('index');
     });
     this.route('new');
   });

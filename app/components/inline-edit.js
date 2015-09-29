@@ -4,6 +4,13 @@ export default Ember.Component.extend({
 
   editing: false,
 
+  //focusOut: function(){
+  //  if (!this.get('isInvalid')) {
+  //    this.toggleProperty("editing");
+  //    this.get('model').save();
+  //  }
+  //},
+
   validations: Ember.computed('value', function () {
     return this.get('model').validateSync().validations;
   }),

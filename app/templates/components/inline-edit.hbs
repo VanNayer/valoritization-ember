@@ -1,8 +1,16 @@
 {{#if editing}}
     <form onsubmit="return false;">
       {{input value=value enter="stopEditing" escape-press='cancelEditing' class='man pan inline-edit-input'}}
-        {{#if isInvalid}}<small class="error man pan">{{invalidMessage}}</small>{{/if}}
+      {{#if isInvalid}}
+          <small class="error man pan">{{invalidMessage}}</small>
+      {{/if}}
     </form>
 {{else}}
-    <a href="#" {{action "startEditing"}}>{{value}}</a>
+    <a {{action "startEditing"}}>
+    {{#if value}}
+      {{value}}
+  {{else}}
+      Add
+  {{/if}}
+    </a>
 {{/if}}

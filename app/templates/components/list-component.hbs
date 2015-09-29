@@ -1,4 +1,4 @@
-<table>
+<table class="fluid-media">
     <thead>
     <tr>
         <th>Title</th>
@@ -15,8 +15,7 @@
             <td>{{inline-edit value=task.cost model=task}}</td>
             <td>
               {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
-              {{#link-to 'task.edit' task}}{{fa-icon "pencil-square"}}{{/link-to}}
-              <a {{action "deleteTask" task}}>{{fa-icon "minus-circle"}}</a>
+                <a {{action "deleteTask" task}}>{{fa-icon "minus-circle"}}</a>
             </td>
         </tr>
     {{/each}}
