@@ -21,10 +21,11 @@ body > .ember-view {
   color: white;
   font-size: larger;
   font-weight: 900;
-  margin-left: 10%;
 
 }
-.inline-edit-input[type="text"] {
+.small-input[type="text"] {
+  padding: 0;
+  margin: 0;
   height: 1.4rem;
 }
 
@@ -119,7 +120,7 @@ $legend_thickness: 20px;
   color: #FFFFFF;
 }
 
-.listing {
+.bottom-section {
   height: 40%;
   @media screen and (max-width: $breakpointM) {
     height: auto;

@@ -3,12 +3,12 @@
       {{matrix-component extremeCoordinates=extremeCoordinates tasks=model class="full-media"}}
     </div>
 </div>
-<div class="row mtxl listing">
+<div class="bottom-section row mtxl ">
     <div class="medium-6 columns pln full-height ">
       {{list-component tasks=model class="list"}}
       {{#link-to 'tasks.new'}}Add a task{{/link-to}}
     </div>
-    <div class="medium-6 columns">
+    <div class="medium-6 columns full-height" style="background-color: #F5F5F5">
       {{outlet}}
     </div>
 </div>

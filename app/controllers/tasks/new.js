@@ -10,9 +10,14 @@ export default Ember.Controller.extend({
         validations
         } = newTask.validateSync();
 
-      if(validations.get('isValid')) {
-        newTask.save(function() {}, function() {});
-        this.transitionToRoute('tasks.new');
+      if (validations.get('isValid')) {
+        newTask.save()
+          .then(function (taskSaved) {
+            this.transitionToRoute('task.index', taskSaved);
+          }.bind(this))
+          .catch(function (err) {
+            console.log(err);
+          });
       }
     }
   }
