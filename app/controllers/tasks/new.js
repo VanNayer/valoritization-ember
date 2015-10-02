@@ -3,14 +3,9 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   actions: {
-    save: function (task) {
+    save: function () {
       var newTask = this.get('model');
-      const {
-        m,
-        validations
-        } = newTask.validateSync();
-
-      if (validations.get('isValid')) {
+      if (newTask.validateSync().validations.get('isValid')) {
         newTask.save()
           .then(function (taskSaved) {
             this.transitionToRoute('task.index', taskSaved);
