@@ -3,5 +3,8 @@ import ENV from '../config/environment';
 
 export default DS.RESTAdapter.extend({
   namespace: 'api',
-  host: ENV.APP.host
+  host: ENV.APP.host,
+  shouldReloadAll() {
+    return false;
+  }
 });
