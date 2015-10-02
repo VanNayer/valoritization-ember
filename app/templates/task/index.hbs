@@ -5,7 +5,7 @@
       {{inline-edit value=model.title model=model}}
     </div>
     <div class="small-1 columns man pan">
-        <a {{action "deleteTask" model}}>{{fa-icon "minus-circle"}}</a>
+        {{confirm-button taskToDelete=model action="displayNewTaskForm"}}
     </div>
 </div>
 <div class="row man pan">

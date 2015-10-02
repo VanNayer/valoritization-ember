@@ -1,0 +1,5 @@
+{{#if isShowingConfirmation}}
+    <a {{action "confirm"}}>Sure?</a>
+{{else}}
+    <a {{action "showConfirmation"}}>{{fa-icon "minus-circle"}}</a>
+{{/if}}

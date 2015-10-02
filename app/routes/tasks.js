@@ -6,8 +6,5 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    say: function() {
-      alert('Michel');
-    }
   }
 });
