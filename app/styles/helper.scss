@@ -189,16 +189,12 @@
 
 .fluid-media {
   width: 100%;
-  height: 100%;
+  height: auto;
   -ms-interpolation-mode: bicubic; // IE 8
 }
 
 .full-media {
   width: 100%;
-  height: 100%;
-}
-
-.full-height{
   height: 100%;
 }
 

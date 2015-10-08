@@ -1,14 +1,14 @@
-<div class="matrix row mtxl">
+<div class="matrix  mtxl fluid-media">
     <div class="small-12 columns mxl full-media">
       {{matrix-component extremeCoordinates=extremeCoordinates tasks=model class="full-media"}}
     </div>
 </div>
 <div class="bottom-section row mtxl ">
-    <div class="medium-6 columns pln full-height ">
+    <div class="medium-6 columns pln">
+      {{#link-to 'tasks.new' class='button expand radius'}}Add a task{{/link-to}}
       {{list-component tasks=model class="list"}}
-      {{#link-to 'tasks.new'}}Add a task{{/link-to}}
     </div>
-    <div class="medium-6 columns full-height" style="background-color: #F5F5F5">
+    <div class="medium-6 columns" style="background-color: #F5F5F5">
       {{outlet}}
     </div>
 </div>

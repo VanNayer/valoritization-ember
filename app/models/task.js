@@ -11,7 +11,7 @@ var Validations = buildValidations({
     validator('presence', true),
     validator('length', {
       min: 1,
-      max: 10
+      max: 35
     })
   ],
   cost: [

@@ -6,38 +6,51 @@
 @import 'bower_components/font-awesome/scss/font-awesome';
 
 $bgcolor: #333333;
+$top-bar-height: 30px;
 
 body > .ember-view {
-  position: fixed;
   width: 100%;
-  height: 100%;
-  @media screen and (max-width: $breakpointM) {
-    height: auto;
-    position: static;
+  height: auto;
+}
+
+.top-bar {
+  position: fixed;
+  z-index: 8000;
+  height: $top-bar-height;
+  width: 100%;
+
+  h1 {
+    color: white;
+    font-size: larger;
+    font-weight: 900;
   }
-}
-
-.top-bar > h1 {
-  color: white;
-  font-size: larger;
-  font-weight: 900;
 
 }
+
 .small-input[type="text"] {
   padding: 0;
   margin: 0;
   height: 1.4rem;
 }
 
-.matrix {
-  height: 50%;
-  @media screen and (max-width: $breakpointM) {
-    height: 200px;
-  }
+// ###################################
+// Matrix component
+// ###################################
+$legend_thickness: 20px;
+$height-matrix-small-screen: 200px;
+$height-matrix-large-screen: 400px;
 
+.matrix {
+  position: fixed;
+  z-index: 8000;
+  background-color: white;
+  height: $height-matrix-large-screen;
+  @media screen and (max-width: $breakpointM) {
+    height: $height-matrix-small-screen;
+  }
 }
 
-.matrix-img {
+.matrix__img {
   position: absolute;
   left: 0;
   top: 0;
@@ -45,9 +58,6 @@ body > .ember-view {
   height: 100%;
   opacity: 0.25;
 }
-
-
-$legend_thickness: 20px;
 
 .matrix__tasks {
   width: 88%;
@@ -74,7 +84,6 @@ $legend_thickness: 20px;
   &.value {
     position: absolute;
     width: $legend_thickness;
-    height: 100%;
     left: 0;
 
     .title {
@@ -109,6 +118,7 @@ $legend_thickness: 20px;
 }
 
 .matrix__tasks__task {
+  width: 100px;
   position: absolute;
   border-radius: 40px;
   background-color: $bgcolor;
@@ -123,19 +133,18 @@ $legend_thickness: 20px;
 }
 
 .bottom-section {
-  height: 40%;
+  position: absolute;
+  z-index: 4000;
+  top: $height-matrix-large-screen + $top-bar-height;
+  left: 0;
+  right: 0;
+  //margin: auto auto;
   @media screen and (max-width: $breakpointM) {
-    height: auto;
+    top: $height-matrix-small-screen  + $top-bar-height;
   }
 }
 
 .list {
-  width: 100%;
-  height: 80%;
-  overflow: scroll;
-  @media screen and (max-width: $breakpointM) {
-    height: auto;
-    overflow: auto;
-  }
+
 }
 
