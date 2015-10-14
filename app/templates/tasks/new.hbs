@@ -1,34 +1,39 @@
-<p class="ptxs"><strong>Create a task:</strong></p>
-<div class="row man pan">
-    <div class="small-12 columns man pan">
-      {{input placeholder='Title' value=model.title enter='save' class='small-input'}}
-      {{#if model.validations.attrs.title.isInvalid}}
-          <small class="error man pan">{{model.validations.attrs.title.message}}</small>
-      {{/if}}
+<div class="medium-12 columns">
+  {{#link-to 'tasks.index' class='button expand radius'}}Show list{{/link-to}}
+
+    <p class="ptxs"><strong>Create a task:</strong></p>
+
+    <div class="row man pan">
+        <div class="small-12 columns man pan">
+          {{input placeholder='Title' value=model.title enter='addTask' class='small-input'}}
+          {{#if model.validations.attrs.title.isInvalid}}
+              <small class="error man pan">{{model.validations.attrs.title.message}}</small>
+          {{/if}}
+        </div>
     </div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Value:</div>
-    <div class="medium-8 columns man pan">
-      {{input placeholder='Value' value=model.value enter='save' class='small-input'}}
-      {{#if model.validations.attrs.value.isInvalid}}
-          <small class="error man pan">{{model.validations.attrs.value.message}}</small>
-      {{/if}}
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Value:</div>
+        <div class="medium-8 columns man pan">
+          {{input placeholder='Value' value=model.value enter='addTask' class='small-input'}}
+          {{#if model.validations.attrs.value.isInvalid}}
+              <small class="error man pan">{{model.validations.attrs.value.message}}</small>
+          {{/if}}
+        </div>
     </div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Cost:</div>
-    <div class="medium-8 columns man pan">
-      {{input placeholder='Cost' value=model.cost enter='save' class='small-input'}}
-      {{#if model.validations.attrs.cost.isInvalid}}
-          <small class="error man pan">{{model.validations.attrs.cost.message}}</small>
-      {{/if}}
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Cost:</div>
+        <div class="medium-8 columns man pan">
+          {{input placeholder='Cost' value=model.cost enter='addTask' class='small-input'}}
+          {{#if model.validations.attrs.cost.isInvalid}}
+              <small class="error man pan">{{model.validations.attrs.cost.message}}</small>
+          {{/if}}
+        </div>
     </div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Description:</div>
-    <div class="medium-8 columns man pan">
-      {{input placeholder='Description' value=model.description enter='save'  class='small-input'}}
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Description:</div>
+        <div class="medium-8 columns man pan">
+          {{input placeholder='Description' value=model.description enter='addTask'  class='small-input'}}
+        </div>
     </div>
 </div>
 

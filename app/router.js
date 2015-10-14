@@ -5,13 +5,19 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-  this.resource('tasks', { path: '/' }, function() {
-    this.resource('task', { path:'/task/:task_id' }, function(){
+Router.map(function () {
+
+  this.resource('matrix', { path: '/:matrix_id'}, function () {
+    // by default this.route('index');
+    this.resource('tasks', function () {
+      this.route('new');
+    });
+    this.resource('task', { path: '/:task_id'}, function () {
       // by default this.route('index');
     });
-    this.route('new');
   });
+
+
 });
 
 export default Router;

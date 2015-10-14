@@ -32,8 +32,10 @@ var Validations = buildValidations({
 });
 
 export default DS.Model.extend(Validations, {
+  matrix: DS.belongsTo('matrix'),
   title: attr('string'),
   cost: attr('number'),
   value: attr('number'),
-  description: attr('string')
+  description: attr('string'),
+  matrix_id: attr('number')
 });

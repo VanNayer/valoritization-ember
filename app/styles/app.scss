@@ -6,7 +6,7 @@
 @import 'bower_components/font-awesome/scss/font-awesome';
 
 $bgcolor: #333333;
-$top-bar-height: 30px;
+$top-bar-height: 45px;
 
 body > .ember-view {
   width: 100%;
@@ -24,7 +24,12 @@ body > .ember-view {
     font-size: larger;
     font-weight: 900;
   }
+}
 
+.banner {
+  width: 100%;
+  text-align: center;
+  background-color: black;
 }
 
 .small-input[type="text"] {
@@ -42,8 +47,9 @@ $height-matrix-large-screen: 400px;
 
 .matrix {
   position: fixed;
-  z-index: 8000;
+  z-index: 4000;
   background-color: white;
+  padding-top: $top-bar-height;
   height: $height-matrix-large-screen;
   @media screen and (max-width: $breakpointM) {
     height: $height-matrix-small-screen;
@@ -135,7 +141,7 @@ $height-matrix-large-screen: 400px;
 
 .bottom-section {
   position: absolute;
-  z-index: 4000;
+  z-index: 2000;
   top: $height-matrix-large-screen + $top-bar-height;
   left: 0;
   right: 0;

@@ -1,23 +1,27 @@
-<p class="ptxs"><strong>Task details:</strong></p>
+<div class="medium-12 columns">
+  {{#link-to 'tasks.index' class='button expand radius'}}Show list{{/link-to}}
 
-<div class="row man pan">
-    <div class="small-11 columns man pan">
-      {{inline-edit value=model.title model=model}}
-    </div>
-    <div class="small-1 columns man pan">
-        {{confirm-button taskToDelete=model action="displayNewTaskForm"}}
-    </div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Value:</div>
-    <div class="medium-8 columns man pan">{{inline-edit value=model.value model=model}}</div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Cost:</div>
-    <div class="medium-8 columns man pan">{{inline-edit value=model.cost model=model}}</div>
-</div>
-<div class="row man pan">
-    <div class="medium-4 columns man pan">Description:</div>
-    <div class="medium-8 columns man pan">{{inline-edit value=model.description model=model}}</div>
-</div>
+    <p class="ptxs"><strong>Task details:</strong></p>
 
+    <div class="row man pan">
+        <div class="small-11 columns man pan">
+          {{inline-edit value=model.title model=model}}
+        </div>
+        <div class="small-1 columns man pan">
+          {{confirm-button taskToDelete=model action="displayNewTaskForm"}}
+        </div>
+    </div>
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Value:</div>
+        <div class="medium-8 columns man pan">{{inline-edit value=model.value model=model}}</div>
+    </div>
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Cost:</div>
+        <div class="medium-8 columns man pan">{{inline-edit value=model.cost model=model}}</div>
+    </div>
+    <div class="row man pan">
+        <div class="medium-4 columns man pan">Description:</div>
+        <div class="medium-8 columns man pan">{{inline-edit value=model.description model=model}}</div>
+    </div>
+
+</div>

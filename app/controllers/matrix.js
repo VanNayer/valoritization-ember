@@ -5,11 +5,14 @@ import _ from 'lodash';
 export default Ember.Controller.extend({
 
   extremeCoordinates: function () {
-    var values = this.model.map(function (task) {
+
+    var tasks = this.model.get('tasks');
+
+    var values = tasks.map(function (task) {
       return task.get('value');
     });
 
-    var costs = this.model.map(function (task) {
+    var costs = tasks.map(function (task) {
       return task.get('cost');
     });
 
@@ -19,10 +22,12 @@ export default Ember.Controller.extend({
       minCost: _.min(costs),
       maxCost: _.max(costs)
     };
-  }.property('model.@each.value', 'model.@each.cost').readOnly()
+  }.property('model.tasks.@each.value', 'model.tasks.@each.cost').readOnly(),
 
+  actions:{
+    addTaskToMatrix: function(task){
+      this.get('model').get('tasks').pushObject(task);
+    }
+  }
 
 });
-
-
-
