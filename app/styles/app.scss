@@ -32,6 +32,10 @@ body > .ember-view {
   background-color: black;
 }
 
+.center {
+  padding-top: $top-bar-height;
+}
+
 .small-input[type="text"] {
   padding: 0;
   margin: 0;
@@ -49,7 +53,6 @@ $height-matrix-large-screen: 400px;
   position: fixed;
   z-index: 4000;
   background-color: white;
-  padding-top: $top-bar-height;
   height: $height-matrix-large-screen;
   @media screen and (max-width: $breakpointM) {
     height: $height-matrix-small-screen;

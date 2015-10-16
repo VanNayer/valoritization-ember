@@ -16,6 +16,9 @@ Router.map(function () {
       // by default this.route('index');
     });
   });
+  this.resource('matrices', function () {
+    this.route('new');
+  });
 
 
 });

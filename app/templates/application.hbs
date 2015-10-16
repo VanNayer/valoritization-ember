@@ -1,13 +1,15 @@
-<div class="fluid-media top-bar">
+<div class="fluid-media top-bar" style="display: inline">
+
     <ul class="button-group">
-        <li>Valoritization.com</li>
-        <li><a href="#" class="button">Link 1</a></li>
-        <li><a href="#" class="button">Link 2</a></li>
+        <li>{{#link-to 'index' class='button'}}Home{{/link-to}}</li>
+        <li>{{#link-to 'matrices.new' class='button'}}Create{{/link-to}}</li>
     </ul>
+
 </div>
 
-{{outlet}}
-
+<div class="center">
+  {{outlet}}
+</div>
 <footer class="row">
     <div class="large-12 columns">
         <hr/>
@@ -17,8 +19,8 @@
             </div>
             <div class="large-6 columns">
                 <ul class="inline-list right">
-                    <li><a href="#" class="button">Link 1</a></li>
-                    <li><a href="#" class="button">Link 2</a></li>
+                    <li>{{#link-to 'index' class='button'}}Home{{/link-to}}</li>
+                    <li>{{#link-to 'matrices.new' class='button'}}Create{{/link-to}}</li>
                 </ul>
             </div>
         </div>
