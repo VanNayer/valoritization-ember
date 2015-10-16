@@ -29,7 +29,8 @@ body > .ember-view {
 .banner {
   width: 100%;
   text-align: center;
-  background-color: black;
+  background-color: #222;
+
 }
 
 .center {
@@ -49,14 +50,19 @@ $legend_thickness: 20px;
 $height-matrix-small-screen: 200px;
 $height-matrix-large-screen: 400px;
 
-.matrix {
+.matrix-panel {
   position: fixed;
-  z-index: 4000;
-  background-color: white;
   height: $height-matrix-large-screen;
+  width: 100%;
+  z-index: 4000;
   @media screen and (max-width: $breakpointM) {
     height: $height-matrix-small-screen;
   }
+}
+.matrix {
+  height: 100%;
+  width: 100%;
+  background-color: white;
 }
 
 .matrix__img {

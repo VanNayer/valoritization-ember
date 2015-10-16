@@ -1,21 +1,24 @@
-<img class="matrix__img" src="assets/images/matrix-background.png">
+<div class="matrix-panel">
+    <div class="matrix">
+        <img class="matrix__img" src="assets/images/matrix-background.png">
+
+        <span class="matrix__legend origin">{{extremeCoordinates.minValue}}/{{extremeCoordinates.minCost}}</span>
 
 
-<span class="matrix__legend origin">{{extremeCoordinates.minValue}}/{{extremeCoordinates.minCost}}</span>
+        <div class="matrix__legend value">
+            <span class="title">{{fa-icon "star"}}</span>
+            <span class="max">{{extremeCoordinates.maxValue}}</span>
+        </div>
 
+        <div class="matrix__legend cost">
+            <span class="title">{{fa-icon "wrench"}}</span>
+            <span class="max">{{extremeCoordinates.maxCost}}</span>
+        </div>
 
-<div class="matrix__legend value">
-    <span class="title">{{fa-icon "star"}}</span>
-    <span class="max">{{extremeCoordinates.maxValue}}</span>
-</div>
-
-<div class="matrix__legend cost">
-    <span class="title">{{fa-icon "wrench"}}</span>
-    <span class="max">{{extremeCoordinates.maxCost}}</span>
-</div>
-
-<div class="matrix__tasks">
-  {{#each tasks as |task|}}
-    {{task-component task=task extremeCoordinates=extremeCoordinates}}
-  {{/each}}
+        <div class="matrix__tasks">
+          {{#each tasks as |task|}}
+            {{task-component task=task extremeCoordinates=extremeCoordinates}}
+          {{/each}}
+        </div>
+    </div>
 </div>
