@@ -15,7 +15,7 @@
             <td>{{inline-edit value=task.cost model=task}}</td>
             <td>
               {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
-              {{confirm-button taskToDelete=task}}
+              {{confirm-button toBeDeleted=task}}
             </td>
         </tr>
     {{/each}}

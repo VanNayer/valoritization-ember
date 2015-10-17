@@ -1,0 +1,31 @@
+<div class="medium-12 columns">
+
+    <div class="row">
+        <div class="small-12 columns mtxl">
+            <table class="fluid-media">
+                <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each model as |matrix|}}
+                    <tr>
+                        <td>
+                          {{inline-edit value=matrix.title model=matrix}}
+                        </td>
+                        <td>
+                          {{#link-to 'tasks.index' matrix}}{{fa-icon "info-circle"}}{{/link-to}}
+                          {{confirm-button toBeDeleted=matrix}}
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+

@@ -19,8 +19,17 @@ Router.map(function () {
   this.resource('matrices', function () {
     this.route('new');
   });
-
-
 });
+
+if (window.history && window.history.pushState) {
+  Router.reopen({
+    rootURL: '/',
+    location: 'history'
+  });
+} else {
+  Router.reopen({
+    location: 'none'
+  });
+}
 
 export default Router;

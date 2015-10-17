@@ -55,14 +55,23 @@ $height-matrix-large-screen: 400px;
   height: $height-matrix-large-screen;
   width: 100%;
   z-index: 4000;
+  background-color: white;
+
   @media screen and (max-width: $breakpointM) {
     height: $height-matrix-small-screen;
   }
 }
 .matrix {
-  height: 100%;
-  width: 100%;
-  background-color: white;
+  height: 90%;
+  width: 90%;
+
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  @media screen and (max-width: $breakpointM) {
+    width: 100%;
+  }
 }
 
 .matrix__img {

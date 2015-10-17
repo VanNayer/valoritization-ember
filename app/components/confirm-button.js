@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  taskToDelete: null,
+  toBeDeleted: null,
 
   actions: {
     showConfirmation() {
@@ -10,7 +10,7 @@ export default Ember.Component.extend({
 
     confirm() {
       this.toggleProperty('isShowingConfirmation');
-      this.get('taskToDelete').destroyRecord();
+      this.get('toBeDeleted').destroyRecord();
       this.sendAction();
     }
   }
