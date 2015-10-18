@@ -1,5 +1,13 @@
 <div class="matrix__tasks__task" style={{taskPosition}}>
   {{#link-to 'task' task class="matrix__tasks__task__link"}}
-    {{truncate task.title limit=10}}
+    {{#if media.isSmall}}
+      {{truncate task.title limit=5}}
+    {{else}}
+      {{#if media.isMedium}}
+        {{truncate task.title limit=10}}
+      {{else}}
+        {{truncate task.title limit=15}}
+      {{/if}}
+    {{/if}}
   {{/link-to}}
 </div>
