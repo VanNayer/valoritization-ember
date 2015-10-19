@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.TextField.extend({
+export default Ember.Component.extend({
   didInsertElement: function () {
     var fm_options = {
       position: "right-bottom",
@@ -16,8 +16,6 @@ export default Ember.TextField.extend({
       }
     };
     fm.init(fm_options);
-
   }
-
 });
 
