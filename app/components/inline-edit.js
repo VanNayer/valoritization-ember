@@ -4,12 +4,13 @@ export default Ember.Component.extend({
 
   editing: false,
 
-  //focusOut: function(){
-  //  if (!this.get('isInvalid')) {
-  //    this.toggleProperty("editing");
-  //    this.get('model').save();
-  //  }
-  //},
+  focusOut: function(){
+    this.send('stopEditing');
+  },
+
+  focusTextField: function() {
+    this.$('input').focus();
+  },
 
   validations: Ember.computed('value', function () {
     return this.get('model').validateSync().validations;
@@ -23,21 +24,22 @@ export default Ember.Component.extend({
     return this.get('validations').get('message');
   }),
 
-  actions: {
 
+  actions: {
     startEditing: function () {
-      this.toggleProperty(("editing"));
+      this.set('editing', true);
+      Ember.run.scheduleOnce('afterRender', this, this.focusTextField);
     },
 
     stopEditing: function () {
       if (!this.get('isInvalid')) {
-        this.toggleProperty("editing");
+        this.set('editing', false);
         this.get('model').save();
       }
     },
 
     cancelEditing: function () {
-      this.toggleProperty("editing");
+      this.set('editing', false);
       this.get("model").rollbackAttributes();
     }
   }
