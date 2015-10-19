@@ -1,5 +1,5 @@
 <div class="matrix__tasks__task" style={{taskPosition}}>
-  {{#link-to 'task' task class="matrix__tasks__task__link"}}
+  {{#link-to 'task' task class="matrix__tasks__task__link" title=task.title }}
     {{#if media.isSmall}}
       {{truncate task.title limit=5}}
     {{else}}

@@ -4,8 +4,12 @@ export default Ember.Controller.extend({
 
   needs: ['matrix'],
 
+  freshPage: true,
+
   actions: {
     addTask: function () {
+
+      this.set('freshPage', false);
 
       var newTask = this.get('model');
       if (newTask.validateSync().validations.get('isValid')) {

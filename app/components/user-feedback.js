@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.TextField.extend({
   didInsertElement: function () {
     var fm_options = {
-      position: "left-bottom",
+      position: "right-bottom",
       name_required: true,
       message_placeholder: "Type your feedback here.",
       message_required: true,

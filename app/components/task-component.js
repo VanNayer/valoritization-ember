@@ -1,8 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
-
   taskPosition: Ember.computed('task.value', 'task.cost', 'extremeCoordinates', function () {
     var extreme = this.get('extremeCoordinates');
     var taskValue = this.get('task').get('value');
@@ -18,6 +16,5 @@ export default Ember.Component.extend({
 
     return new Ember.Handlebars.SafeString('left: ' + x + '%; bottom: ' + y + '%;');
   })
-
 
 });
