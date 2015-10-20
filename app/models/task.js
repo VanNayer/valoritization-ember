@@ -37,5 +37,5 @@ export default DS.Model.extend(Validations, {
   cost: attr('number'),
   value: attr('number'),
   description: attr('string'),
-  matrix_id: attr('number')
+  matrix_id: attr('string')
 });

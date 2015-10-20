@@ -16,6 +16,7 @@ var Validations = buildValidations({
   ]
 });
 export default DS.Model.extend(Validations, {
+  shared: attr('boolean'),
   title: attr('string'),
   tasks: DS.hasMany('task', {
     async: true
