@@ -5,6 +5,8 @@ export default Ember.Controller.extend({
   actions: {
     addMatrix: function () {
 
+      this.set('freshPage', false);
+
       var newMatrice = this.get('model');
 
       if (newMatrice.validateSync().validations.get('isValid')) {

@@ -1,23 +1,32 @@
 <div class="medium-12 columns">
 
     <div class="row">
-        <div class="small-12 columns man pan">
+
+        <div class="small-12 columns">
+
             <h2>Create your matrix</h2>
 
             <p class="taj">
                 <label>
                     Title:
                   {{input placeholder='What is the matrix purpose?' value=model.title enter='addMatrix' }}
+                  {{#unless freshPage}}
+                    {{#if model.validations.attrs.title.isInvalid}}
+                        <small class="error man pan">{{model.validations.attrs.title.message}}</small>
+                    {{/if}}
+                  {{/unless}}
                 </label>
 
                 <label class="mtxl">
-                    Shared matrix:
+                    Shared matrix: <br/>
+
                   {{input type="checkbox" name="Shared matrix" checked=model.shared enter='addMatrix'}}
-                    <br/><i>Check me to make the matrix public. If not, keep the url!</i>
+                    <i class="alert-box secondary round dispib ptn pbn">
+                        If not, keep the url!
+                    </i>
                 </label>
             </p>
-
-            <button {{action "addMatrix"}} class="mtxl mbxl">
+            <button {{action "addMatrix"}} class="small">
                 Let's go!
             </button>
 

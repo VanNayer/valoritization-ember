@@ -4,8 +4,6 @@ export default Ember.Controller.extend({
 
   needs: ['matrix'],
 
-  freshPage: true,
-
   actions: {
     addTask: function () {
 
