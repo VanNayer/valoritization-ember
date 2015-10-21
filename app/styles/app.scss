@@ -17,13 +17,15 @@ body > .ember-view {
   position: fixed;
   z-index: 8000;
   height: $top-bar-height;
-  width: 100%;
+}
 
-  h1 {
-    color: white;
-    font-size: larger;
-    font-weight: 900;
-  }
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  background-color: lightgrey;
+  opacity: 0.5;
+  height: 45px;
+  z-index: 8000;
 }
 
 .banner {
@@ -84,7 +86,10 @@ $height-matrix-large-screen: 400px;
 
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 
   @media screen and (max-width: $breakpointM) {
     width: 100%;
