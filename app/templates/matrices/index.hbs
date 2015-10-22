@@ -1,35 +1,28 @@
-<div class="medium-12 columns">
+<h2>Matrices:</h2>
 
-    <div class="row">
+<p>You can find all the public matrices and your private one.</p>
 
-        <div class="small-12 columns">
-
-            <h2>Public matrices:</h2>
-
-            <table class="fluid-media">
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                {{#each model as |matrix|}}
-                    <tr>
-                        <td>
-                          {{inline-edit value=matrix.title model=matrix}}
-                        </td>
-                        <td>
-                          {{#link-to 'tasks.index' matrix}}{{fa-icon "info-circle"}}{{/link-to}}
-                          {{confirm-button toBeDeleted=matrix}}
-                        </td>
-                    </tr>
-                {{/each}}
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<table class="fluid-media">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each model as |matrix|}}
+        <tr>
+            <td>
+              {{inline-edit value=matrix.title model=matrix}}
+            </td>
+            <td>
+              {{#link-to 'tasks.index' matrix}}{{fa-icon "info-circle"}}{{/link-to}}
+              {{confirm-button toBeDeleted=matrix}}
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
 
 
 

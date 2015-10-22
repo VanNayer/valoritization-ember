@@ -20,6 +20,7 @@ Router.map(function () {
   this.resource('matrices', function () {
     this.route('new');
   });
+  this.route('about', { path: '/about' });
 });
 
 if (window.history && window.history.pushState) {
