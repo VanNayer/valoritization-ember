@@ -11,8 +11,8 @@
     {{#each tasks as |task|}}
         <tr>
             <td>{{inline-edit value=task.title model=task}}</td>
-            <td>{{inline-edit value=task.value model=task}}</td>
-            <td>{{inline-edit value=task.cost model=task}}</td>
+            <td>{{inline-edit type="number" value=task.value model=task}}</td>
+            <td>{{inline-edit type="number" value=task.cost model=task}}</td>
             <td>
               {{#link-to 'task' task}}{{fa-icon "info-circle"}}{{/link-to}}
               {{confirm-button toBeDeleted=task}}

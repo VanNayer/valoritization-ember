@@ -1,40 +1,52 @@
-<div class="medium-12 columns">
+<div class="row ptxl">
+    <div class="small-12 columns panel">
 
-    <div class="row">
+        <h2>Create your matrix</h2>
 
-        <div class="small-12 columns">
-
-            <h2>Create your matrix</h2>
-
-            <p class="taj">
-                <label>
-                    Title:
-                  {{input placeholder='What is the matrix purpose?' value=model.title enter='addMatrix' }}
-                  {{#unless freshPage}}
-                    {{#if model.validations.attrs.title.isInvalid}}
-                        <small class="error man pan">{{model.validations.attrs.title.message}}</small>
-                    {{/if}}
-                  {{/unless}}
-                </label>
-
-                <label class="mtxl">
-                    Shared matrix: <br/>
-
-                  {{input type="checkbox" name="Shared matrix" checked=model.shared enter='addMatrix'}}
-                    <i class="alert-box secondary round dispib ptn pbn">
-                        If not, keep the url!
-                    </i>
-                </label>
-            </p>
-            <button {{action "addMatrix"}} class="small">
-                Let's go!
-            </button>
+        <label>
+            Title:
+          {{input placeholder='What is the matrix purpose?' value=model.title enter='addMatrix' required="true"}}
+          {{#unless freshPage}}
+            {{#if model.validations.attrs.title.isInvalid}}
+                <small class="error man pan">{{model.validations.attrs.title.message}}</small>
+            {{/if}}
+          {{/unless}}
+        </label>
 
 
-        </div>
+        <label class="mtm dispib">
+            Check me to make it <strong>public</strong>:
+          {{input type="checkbox" name="Share it" checked=model.shared enter='addMatrix'}}
+        </label>
+
+
+        <label class="">
+            Choose the metric for the <strong>value</strong>:
+            <input type="text" list="value-types" placeholder="Euros, Dollars, hours, ... ">
+        </label>
+
+        <label class="">
+            Choose the metric for the <strong>cost</strong>:
+            <input type="text" list="value-types" placeholder="Euros, Dollars, hours, ... ">
+        </label>
+
+        <datalist id="value-types">
+            <option value="Euros"></option>
+            <option value="Dollars"></option>
+            <option value="Days"></option>
+            <option value="Hours"></option>
+            <option value="Minutes"></option>
+            <option value="Scale"></option>
+        </datalist>
+
+
+        <button {{action "addMatrix"}} class="small">
+            Let's go!
+        </button>
+
     </div>
-
 </div>
+
 
 
 

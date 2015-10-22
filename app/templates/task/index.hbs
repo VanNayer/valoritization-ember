@@ -1,12 +1,16 @@
 <div class="medium-12 columns">
 
     <div class="row man pan">
-        <div class="medium-4 columns man paxs "><p class='sub-section-title'>{{controllers.matrix.model.title}}</p></div>
-        <div class="medium-4 columns man paxs">{{#link-to 'tasks.index' class='button expand radius'}}Show list{{/link-to}}</div>
-        <div class="medium-4 columns man paxs">{{#link-to 'tasks.new' class='button expand radius'}}Add a task{{/link-to}}</div>
+        <div class="medium-4 columns man paxs ">
+            <p class='sub-section-title'>{{controllers.matrix.model.title}}</p>
+        </div>
+        <div class="medium-4 columns man paxs">
+          {{#link-to 'tasks.index' class='button expand radius'}}Show list{{/link-to}}
+        </div>
+        <div class="medium-4 columns man paxs">
+          {{#link-to 'tasks.new' class='button expand radius'}}Add a task{{/link-to}}
+        </div>
     </div>
-
-
 
     <p class="ptxs"><strong>Task details:</strong></p>
 
@@ -20,11 +24,11 @@
     </div>
     <div class="row man pan">
         <div class="medium-4 columns man pan">Value:</div>
-        <div class="medium-8 columns man pan">{{inline-edit value=model.value model=model}}</div>
+        <div class="medium-8 columns man pan">{{inline-edit type="number" value=model.value model=model}}</div>
     </div>
     <div class="row man pan">
         <div class="medium-4 columns man pan">Cost:</div>
-        <div class="medium-8 columns man pan">{{inline-edit value=model.cost model=model}}</div>
+        <div class="medium-8 columns man pan">{{inline-edit type="number" value=model.cost model=model}}</div>
     </div>
     <div class="row man pan">
         <div class="medium-4 columns man pan">Description:</div>

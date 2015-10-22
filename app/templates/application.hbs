@@ -1,21 +1,22 @@
-<header class="fluid-media top-bar">
-    <ul class="button-group">
-        <li>{{#link-to 'index' class='button'}}Home{{/link-to}}</li>
-        <li>{{#link-to 'matrices.new' class='button'}}Create{{/link-to}}</li>
-        <li>{{#link-to 'matrices' class='button'}}Matrices{{/link-to}}</li>
-    </ul>
+<header class="dispib">
+    <span class="title prxl plxl" >Valoritization.com</span>
+    <nav class="dispib">
+        <ul class="button-group">
+            <li>{{#link-to 'index' class='button small man pts pbs'}}Home{{/link-to}}</li>
+            <li>{{#link-to 'matrices.new' class='button small man pts pbs'}}Create{{/link-to}}</li>
+            <li>{{#link-to 'matrices' class='button small man pts pbs'}}Matrices{{/link-to}}</li>
+        </ul>
+    </nav>
 </header>
 
-<div class="center">
+<main>
   {{outlet}}
-</div>
+</main>
 
-<footer class="fluid-media bottom-bar">
-    <ul class="button-group">
-        <li>{{#link-to 'index' class='button'}}Home{{/link-to}}</li>
-        <li>{{#link-to 'matrices.new' class='button'}}Create{{/link-to}}</li>
-        <li>{{#link-to 'matrices' class='button'}}Matrices{{/link-to}}</li>
-    </ul>
+<footer class="bottom-bar">
+    <span class="prl">&copy; Valoritization 2015</span>
 </footer>
 
-{{user-feedback}}
+<aside>
+  {{user-feedback}}
+</aside>

@@ -4,11 +4,11 @@ export default Ember.Component.extend({
 
   editing: false,
 
-  focusOut: function(){
+  focusOut: function () {
     this.send('stopEditing');
   },
 
-  focusTextField: function() {
+  focusTextField: function () {
     this.$('input').focus();
   },
 

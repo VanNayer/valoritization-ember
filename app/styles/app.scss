@@ -6,26 +6,40 @@
 @import 'bower_components/font-awesome/scss/font-awesome';
 
 $bgcolor: #333333;
-$top-bar-height: 45px;
+$top-bar-height: 40px;
 
 body > .ember-view {
   width: 100%;
   height: auto;
 }
 
-.top-bar {
+header {
+  .title{
+    @media screen and (max-width: $breakpointS) {
+      display: none;
+    }
+  }
+  color: white;
+  width: 100%;
+  background-color: black;
   position: fixed;
   z-index: 8000;
   height: $top-bar-height;
 }
 
-.bottom-bar {
+footer {
   position: fixed;
   bottom: 0;
-  background-color: lightgrey;
-  opacity: 0.5;
-  height: 45px;
-  z-index: 8000;
+  right: 0;
+  @media screen and (max-width: $breakpointS) {
+    display: none;
+  }
+}
+
+.feedback_trigger {
+  @media screen and (max-width: $breakpointS) {
+    display: none;
+  }
 }
 
 .banner {
@@ -35,7 +49,7 @@ body > .ember-view {
 
 }
 
-.center {
+main {
   padding-top: $top-bar-height;
 }
 
@@ -44,6 +58,7 @@ body > .ember-view {
   margin: 0;
   height: 1.4rem;
 }
+
 .sub-section-title {
   position: relative;
   display: inline-block;
@@ -80,6 +95,7 @@ $height-matrix-large-screen: 400px;
     height: $height-matrix-small-screen;
   }
 }
+
 .matrix {
   height: 90%;
   width: 90%;
@@ -173,6 +189,10 @@ $height-matrix-large-screen: 400px;
   text-align: center;
   opacity: 0.8;
   white-space: nowrap;
+}
+
+.matrix__tasks__task:hover {
+  transform: scale(1.2);
 }
 
 .matrix__tasks__task__link {

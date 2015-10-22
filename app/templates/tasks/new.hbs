@@ -22,7 +22,7 @@
     <div class="row man pan">
         <div class="medium-4 columns man pan">Value:</div>
         <div class="medium-8 columns man pan">
-          {{input placeholder='Value' value=model.value enter='addTask' class='small-input'}}
+          {{input type="number" placeholder='Value' value=model.value enter='addTask' class='small-input'}}
           {{#unless freshPage}}
             {{#if model.validations.attrs.value.isInvalid}}
                 <small class="error man pan">{{model.validations.attrs.value.message}}</small>
@@ -33,7 +33,7 @@
     <div class="row man pan">
         <div class="medium-4 columns man pan">Cost:</div>
         <div class="medium-8 columns man pan">
-          {{input placeholder='Cost' value=model.cost enter='addTask' class='small-input'}}
+          {{input type="number" placeholder='Cost' value=model.cost enter='addTask' class='small-input'}}
           {{#unless freshPage}}
             {{#if model.validations.attrs.cost.isInvalid}}
                 <small class="error man pan">{{model.validations.attrs.cost.message}}</small>
