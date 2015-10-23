@@ -13,9 +13,10 @@
     {{#each model as |matrix|}}
         <tr>
             <td>
-              {{inline-edit value=matrix.title model=matrix}}
+              {{inline-edit value=matrix.title model=matrix action='goToMatrix'}}
             </td>
             <td>
+
               {{#link-to 'tasks.index' matrix}}{{fa-icon "info-circle"}}{{/link-to}}
               {{confirm-button toBeDeleted=matrix}}
             </td>

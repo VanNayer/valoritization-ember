@@ -17,7 +17,8 @@
     "font-awesome": "~4.4.0",
     "moment": ">= 2.8.0",
     "moment-timezone": ">= 0.1.0",
-    "feedback_me": "0.5.8"
+    "feedback_me": "0.5.8",
+    "localforage" : "1.3.0"
   },
   "resolutions": {
     "jquery": ">=1.6"

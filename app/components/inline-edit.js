@@ -4,6 +4,35 @@ export default Ember.Component.extend({
 
   editing: false,
 
+  timer: null,
+
+  didInsertElement: function () {
+
+    var element = this.$('div')[0];
+
+    element.onclick = function () {
+
+      var timer = this.get('timer');
+      var model = this.get('model');
+
+      if (timer) {
+        clearTimeout(timer);
+      }
+      this.set('timer', setTimeout(function () {
+        this.sendAction('action', model);
+      }.bind(this), 150));
+
+    }.bind(this);
+
+    element.ondblclick = function () {
+      var timer = this.get('timer');
+      clearTimeout(timer);
+      this.send('startEditing');
+    }.bind(this);
+
+  },
+
+
   focusOut: function () {
     this.send('stopEditing');
   },
@@ -23,7 +52,6 @@ export default Ember.Component.extend({
   invalidMessage: Ember.computed('validations', function () {
     return this.get('validations').get('message');
   }),
-
 
   actions: {
     startEditing: function () {

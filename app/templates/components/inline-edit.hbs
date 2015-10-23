@@ -6,11 +6,11 @@
       {{/if}}
     </form>
 {{else}}
-    <a {{action "startEditing"}}>
-    {{#if value}}
-      {{value}}
-  {{else}}
-      Add
-  {{/if}}
-    </a>
+    <div class="inline-edit-title">
+      {{#if value}}
+        {{value}}
+      {{else}}
+          Add
+      {{/if}}
+    </div>
 {{/if}}

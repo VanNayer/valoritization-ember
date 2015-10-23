@@ -17,6 +17,7 @@ module.exports = function(defaults) {
   // should be the asset to use in that environment.
   app.import('bower_components/feedback_me/js/jquery.feedback_me.js');
   app.import('bower_components/feedback_me/css/jquery.feedback_me.css');
+  app.import('bower_components/localforage/dist/localforage.min.js');
 
   // If the library that you are including contains AMD or ES6
   // modules that you would like to import into your application
