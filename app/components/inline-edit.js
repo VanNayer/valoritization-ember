@@ -6,31 +6,46 @@ export default Ember.Component.extend({
 
   timer: null,
 
-  didInsertElement: function () {
-
-    var element = this.$('div')[0];
-
-    element.onclick = function () {
-
-      var timer = this.get('timer');
-      var model = this.get('model');
-
-      if (timer) {
-        clearTimeout(timer);
-      }
-      this.set('timer', setTimeout(function () {
-        this.sendAction('action', model);
-      }.bind(this), 150));
-
-    }.bind(this);
-
-    element.ondblclick = function () {
-      var timer = this.get('timer');
-      clearTimeout(timer);
+  click: function () {
+    if (!this.get('editing')) {
       this.send('startEditing');
-    }.bind(this);
-
+    }
   },
+
+
+  //didInsertElement: function () {
+  //
+  //
+  //  var element = this.$('div')[0];
+
+  //var needDoubleClick = undefined != this.get('action');
+  //
+  //// When we want to handle single&double click
+  //if (needDoubleClick) {
+  //  element.onclick = function () {
+  //
+  //    var timer = this.get('timer');
+  //    var model = this.get('model');
+  //    if (timer) {
+  //      clearTimeout(timer);
+  //    }
+  //    this.set('timer', setTimeout(function () {
+  //      this.sendAction('action', model);
+  //    }.bind(this), 200));
+  //  }.bind(this);
+  //
+  //  element.ondblclick = function () {
+  //    var timer = this.get('timer');
+  //    clearTimeout(timer);
+  //    this.send('startEditing');
+  //  }.bind(this);
+  //} else {
+  //  // Otherwise
+  //  element.onclick = function () {
+  //    this.send('startEditing');
+  //  }.bind(this);
+  //}
+  //},
 
 
   focusOut: function () {

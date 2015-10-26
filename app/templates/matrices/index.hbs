@@ -1,8 +1,41 @@
-<h2>Matrices:</h2>
-
-<p>You can find all the public matrices and your private one.</p>
-
 <table class="fluid-media">
+
+  {{#if model.myPrivateMatrices}}
+      <thead>
+      <tr>
+          <th><h2>Private matrices:</h2></th>
+          <th><em>Double click to edit a name</em></th>
+      </tr>
+      </thead>
+      <thead>
+      <tr>
+          <th>Title</th>
+          <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      {{#each model.myPrivateMatrices as |matrix|}}
+          <tr>
+              <td>
+                {{inline-edit value=matrix.title model=matrix action='goToMatrix'}}
+              </td>
+              <td>
+
+                {{#link-to 'tasks.index' matrix}}{{fa-icon "info-circle"}}{{/link-to}}
+                {{confirm-button toBeDeleted=matrix}}
+              </td>
+          </tr>
+      {{/each}}
+      </tbody>
+
+  {{/if}}
+
+    <thead>
+    <tr>
+        <th><h2>Public matrices:</h2></th>
+        <th><em>Double click to edit a name</em></th>
+    </tr>
+    </thead>
     <thead>
     <tr>
         <th>Title</th>
@@ -10,7 +43,7 @@
     </tr>
     </thead>
     <tbody>
-    {{#each model as |matrix|}}
+    {{#each model.publicMatrices as |matrix|}}
         <tr>
             <td>
               {{inline-edit value=matrix.title model=matrix action='goToMatrix'}}
