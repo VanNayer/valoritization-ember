@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     }
 
     return {
-      publicMatrices: this.store.find('matrix'),
+      publicMatrices: this.store.find('matrix', {shared: true}),
       myPrivateMatrices: myPrivateMatrices
     }
   },
