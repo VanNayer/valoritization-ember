@@ -24,10 +24,20 @@ export default Ember.Controller.extend({
     };
   }.property('model.tasks.@each.value', 'model.tasks.@each.cost').readOnly(),
 
-  actions:{
-    addTaskToMatrix: function(task){
+  actions: {
+    addTaskToMatrix: function (task) {
       this.get('model').get('tasks').pushObject(task);
+    },
+
+    computeBestNext: function () {
+      console.log('coucou');
+      var bestNext = _.max(this.get('model').get('tasks').toArray(), function (task) {
+        return task.get('value') / task.get('cost');
+      });
+      this.growl.info(bestNext.get('title') + ' is your next task.');
+
     }
+
   }
 
 });

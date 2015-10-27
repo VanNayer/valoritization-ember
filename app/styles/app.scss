@@ -17,6 +17,10 @@ body > .ember-view {
   cursor: pointer;
 }
 
+.growl-manager{
+  z-index: 35000;
+}
+
 header {
   .title {
     @media screen and (max-width: $breakpointS) {
@@ -97,6 +101,18 @@ $height-matrix-large-screen: 400px;
   @media screen and (max-width: $breakpointM) {
     height: $height-matrix-small-screen;
   }
+}
+
+.matrix-panel__tip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #008CBA;
+  color: white;
+  z-index: 11000;
+  border: solid 1px;
+  border-radius: 10%;
+  font-size: 24px;
 }
 
 .matrix {

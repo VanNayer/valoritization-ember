@@ -29,6 +29,7 @@
     "ember-cli-font-awesome": "0.1.1",
     "ember-cli-foundation-sass": "1.1.1",
     "ember-cli-google-analytics": "^1.4.0",
+    "ember-cli-growl": "^1.0.4",
     "ember-cli-htmlbars": "0.7.9",
     "ember-cli-htmlbars-inline-precompile": "^0.2.0",
     "ember-cli-ic-ajax": "0.2.1",
