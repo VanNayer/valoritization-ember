@@ -16,12 +16,14 @@ export default Ember.Controller.extend({
       return task.get('cost');
     });
 
+
     return {
-      minValue: _.min(values),
-      maxValue: _.max(values),
-      minCost: _.min(costs),
-      maxCost: _.max(costs)
+      minValue: (values.length <= 1) ? 0 : _.min(values),
+      maxValue: (values.length < 1) ? 10 : _.max(values),
+      minCost: (costs.length <= 1) ? 0 : _.min(costs),
+      maxCost: (costs.length < 1) ? 10 : _.max(costs)
     };
+
   }.property('model.tasks.@each.value', 'model.tasks.@each.cost').readOnly(),
 
   actions: {
@@ -30,7 +32,7 @@ export default Ember.Controller.extend({
     },
 
     computeBestNext: function () {
-      console.log('coucou');
+
       var bestNext = _.max(this.get('model').get('tasks').toArray(), function (task) {
         return task.get('value') / task.get('cost');
       });
