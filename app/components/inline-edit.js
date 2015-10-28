@@ -53,7 +53,7 @@ export default Ember.Component.extend({
   },
 
   focusTextField: function () {
-    this.$('input').focus();
+    this.$('input').get(0).focus();
   },
 
   validations: Ember.computed('value', function () {

@@ -17,15 +17,52 @@ body > .ember-view {
   cursor: pointer;
 }
 
-.growl-manager{
+.growl-manager {
   z-index: 35000;
 }
 
 header {
   .title {
-    @media screen and (max-width: $breakpointS) {
+    @media screen and (max-width: $breakpointS + 100px) {
       display: none;
     }
+  }
+  .header__button {
+    height: 46px;
+    width: 84px;
+    background-color: rgb(0, 140, 186);
+
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: inline-block;
+
+    font-size: 26px;
+    text-align: center;
+    text-decoration: none;
+
+    margin: 1px;
+    padding: .5rem 1.75rem;
+    position: relative;
+
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-property: background-color;
+    transition-timing-function: ease-out;
+
+    @media screen and (max-width: $breakpointS) {
+      width: 60px;
+      padding: .5rem 1rem;
+    }
+
+  }
+
+  .header__button:hover {
+    background-color: rgb(0, 112, 149);
   }
   color: white;
   width: 100%;
