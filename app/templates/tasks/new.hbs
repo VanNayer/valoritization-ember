@@ -1,10 +1,19 @@
 <div class="medium-12 columns">
 
-    <div class="row man pan">
-        <div class="medium-4 columns man paxs "><p class='sub-section-title'>{{controllers.matrix.model.title}}</p>
+
+    <div class="bottom-section__menu">
+        <div  class="bottom-section__menu__title">
+          {{controllers.matrix.model.title}}
         </div>
-        <div class="medium-8 columns man paxs">{{#link-to 'tasks.index' class='button expand radius'}}Show
-            list{{/link-to}}</div>
+        <div class="bottom-section__menu__link">
+          {{#link-to 'tasks.index' class='button expand radius man'}}Show list{{/link-to}}
+        </div>
+    </div>
+
+    <div class="row man pan">
+        <div class="medium-4 columns man paxs "><p class='sub-section-title'></p>
+        </div>
+        <div class="medium-8 columns man paxs"></div>
     </div>
 
     <p class="ptxs"><strong>Create a task:</strong></p>
